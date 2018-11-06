@@ -21,11 +21,13 @@ func main() {
         fmt.Println("Worm open table", *cachePath)
     }
 
-    var peer = peer.StartPeer(*port, cache)
+    var peer = peer.NewPeer(cache)
 
     if peer != nil {
         fmt.Println("Worm start on port", *port)
     }
+
+    peer.Serve(*port)
 
     if *deamon {
         fmt.Println("deamon")

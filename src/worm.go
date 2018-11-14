@@ -1,4 +1,8 @@
-/*Worm*/
+/**
+ * File: worm.go
+ * Author: wtzhuque@163.com
+ * Description: Main Entry
+ */
 package main
 
 import (
@@ -12,6 +16,7 @@ func main() {
     var port = flag.Int("port",  8338, "port to listen on")
     var cachePath = flag.String("cache", "./data", "cache data path")
     var deamon = flag.Bool("deamon", false, "work in deamon mode")
+    var tracker = flag.Bool("tracker", false, "work as a tracker")
 
     flag.Parse()
 

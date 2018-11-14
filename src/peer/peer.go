@@ -1,3 +1,8 @@
+/**
+ * File: peer.go
+ * Author: wtzhuque@163.com
+ * Description: implement peer service
+ */
 package peer
 
 import (
@@ -24,12 +29,6 @@ type GetReq struct {
 type GetRes struct {
 }
 
-type PublishReq struct {
-}
-
-type PublishRes struct {
-}
-
 type DumpReq struct {
 }
 
@@ -40,10 +39,6 @@ func NewPeer(cache *CacheTable) *Peer {
     var peer *Peer = new(Peer)
     peer.cache = cache
     return peer
-}
-
-func (peer *Peer) Publish(req *PublishReq, res *PublishRes) error {
-    return nil
 }
 
 func (peer *Peer) Dump(req *DumpReq, res *DumpRes) error {

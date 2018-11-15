@@ -1,4 +1,3 @@
-/*Worm*/
 package main
 
 import (
